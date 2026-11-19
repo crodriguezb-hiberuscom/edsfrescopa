@@ -1,6 +1,6 @@
 # BYOM (Bring Your Own Markup)
 
-Live page: https://main--edsfrescopa--jorgerzt.aem.page/integrations/byom
+Live page: https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/integrations/byom
 
 Official docs: https://www.aem.live/developer/byom
 
@@ -18,11 +18,11 @@ A site may declare a primary source and one optional **overlay**. The overlay is
 
 ## How it is configured in this project
 
-The site config (`admin.hlx.page/config/jorgerzt/sites/edsfrescopa.json`, `content` section):
+The site config (`admin.hlx.page/config/crodriguezb-hiberuscom/sites/edsfrescopa.json`, `content` section):
 
 ```json
 {
-  "source":  { "url": "https://content.da.live/jorgerzt/edsfrescopa/", "type": "markup" },
+  "source":  { "url": "https://content.da.live/crodriguezb-hiberuscom/edsfrescopa/", "type": "markup" },
   "overlay": {
     "url": "https://my-custom-api.lopezpellicerjorge.workers.dev/api/frescopa/byom",
     "type": "markup",
@@ -31,7 +31,7 @@ The site config (`admin.hlx.page/config/jorgerzt/sites/edsfrescopa.json`, `conte
 }
 ```
 
-To set it, POST the whole `content` object to `https://admin.hlx.page/config/jorgerzt/sites/edsfrescopa/content.json` with an admin token. POSTing to `content/overlay.json` is rejected.
+To set it, POST the whole `content` object to `https://admin.hlx.page/config/crodriguezb-hiberuscom/sites/edsfrescopa/content.json` with an admin token. POSTing to `content/overlay.json` is rejected.
 
 When `/integrations/byom` is previewed, the admin requests:
 
@@ -44,7 +44,7 @@ When `/integrations/byom` is previewed, the admin requests:
 
 ```sh
 curl -H "Authorization: Bearer $TOKEN" \
-  https://admin.hlx.page/status/jorgerzt/edsfrescopa/main/integrations/byom
+  https://admin.hlx.page/status/crodriguezb-hiberuscom/edsfrescopa/main/integrations/byom
 # preview.sourceLocation = markup:https://my-custom-api.../integrations/byom.html
 ```
 
@@ -88,7 +88,7 @@ The page uses the same blocks as the authored pages (`teaser`, `cards`, `columns
 
    ```sh
    curl -X POST -H "Authorization: Bearer $TOKEN" \
-     https://admin.hlx.page/preview/jorgerzt/edsfrescopa/main/integrations/byom
+     https://admin.hlx.page/preview/crodriguezb-hiberuscom/edsfrescopa/main/integrations/byom
    ```
 
 Nothing reaches the site until it is previewed or published. BYOM is **pull-at-publish**, not per request. To keep a page in sync automatically, the source system (or a webhook or cron) calls the admin preview/publish API when its content changes.
@@ -99,7 +99,7 @@ A site has only **one** overlay, and json2html is normally configured *as* that 
 
 ```
 GET .../api/frescopa/byom/integrations/json2html.html
--> 302 Location: https://json2html.adobeaem.workers.dev/jorgerzt/edsfrescopa/main/integrations/json2html
+-> 302 Location: https://json2html.adobeaem.workers.dev/crodriguezb-hiberuscom/edsfrescopa/main/integrations/json2html
 ```
 
 The admin follows the redirect, so json2html produces that one page. See [json2html.md](json2html.md). In a real project you would usually choose one overlay: either a BYOM service that routes internally, or json2html directly.

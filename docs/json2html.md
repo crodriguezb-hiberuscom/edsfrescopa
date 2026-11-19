@@ -1,6 +1,6 @@
 # json2html
 
-Live page: https://main--edsfrescopa--jorgerzt.aem.page/integrations/json2html
+Live page: https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/integrations/json2html
 
 Official docs: https://www.aem.live/developer/json2html
 
@@ -22,10 +22,10 @@ admin.hlx.page  preview /integrations/json2html
 my-custom-api   /api/frescopa/byom/integrations/json2html.html
   |  302 Location: json2html worker
   v
-json2html.adobeaem.workers.dev/jorgerzt/edsfrescopa/main/integrations/json2html
+json2html.adobeaem.workers.dev/crodriguezb-hiberuscom/edsfrescopa/main/integrations/json2html
   |  1. looks up the config entry that matches /integrations/json2html
   |  2. GET endpoint  -> my-custom-api /api/frescopa/data/todays-roasts.json
-  |  3. GET template -> main--edsfrescopa--jorgerzt.aem.page/templates/json2html/todays-roasts.html
+  |  3. GET template -> main--edsfrescopa--crodriguezb-hiberuscom.aem.page/templates/json2html/todays-roasts.html
   |  4. Mustache render -> EDS HTML
   v
 admin ingests the HTML -> content bus -> .aem.page
@@ -34,7 +34,7 @@ admin ingests the HTML -> content bus -> .aem.page
 The 302 step exists only because this site shows BYOM and json2html side by side and has a single overlay. In a json2html-only project, the overlay URL is the worker itself:
 
 ```json
-"overlay": { "url": "https://json2html.adobeaem.workers.dev/jorgerzt/edsfrescopa/main", "type": "markup" }
+"overlay": { "url": "https://json2html.adobeaem.workers.dev/crodriguezb-hiberuscom/edsfrescopa/main", "type": "markup" }
 ```
 
 ## Worker config
@@ -42,7 +42,7 @@ The 302 step exists only because this site shows BYOM and json2html side by side
 The config is stored per org/site/branch in the worker:
 
 ```sh
-curl -X POST https://json2html.adobeaem.workers.dev/config/jorgerzt/edsfrescopa/main \
+curl -X POST https://json2html.adobeaem.workers.dev/config/crodriguezb-hiberuscom/edsfrescopa/main \
   -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
   --data '[{
     "path": "/integrations/json2html",
@@ -102,12 +102,12 @@ The template is served from `aem.page` like any other code file, so a `git push`
 ## Demo script: change data, see the page change
 
 1. Edit the JSON in my-custom-api (`PUT /_admin/endpoints/frescopa/data/todays-roasts.json`). For example, change a price or add a product.
-2. Optional: check the render directly at `https://json2html.adobeaem.workers.dev/jorgerzt/edsfrescopa/main/integrations/json2html`.
+2. Optional: check the render directly at `https://json2html.adobeaem.workers.dev/crodriguezb-hiberuscom/edsfrescopa/main/integrations/json2html`.
 3. Preview the page again:
 
    ```sh
    curl -X POST -H "Authorization: Bearer $TOKEN" \
-     https://admin.hlx.page/preview/jorgerzt/edsfrescopa/main/integrations/json2html
+     https://admin.hlx.page/preview/crodriguezb-hiberuscom/edsfrescopa/main/integrations/json2html
    ```
 
 Like BYOM, json2html runs **when the page is previewed or published**, not on every visit. The output is static and cached, so it stays fast. For per-request data, such as stock, personalised prices or the visitor's location, see [edge-workers.md](edge-workers.md).

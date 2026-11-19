@@ -347,6 +347,36 @@
           }
         },
         {
+          "title": "Title Text Image",
+          "id": "title-text-image",
+          "model": "title-text-image",
+          "plugins": {
+            "da": {
+              "name": "title-text-image",
+              "rows": 3,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "title",
+                  "selector": "div:nth-child(1)>div"
+                },
+                {
+                  "name": "text",
+                  "selector": "div:nth-child(2)>div"
+                },
+                {
+                  "name": "image",
+                  "selector": "div:nth-child(3)>div>picture>img[src]"
+                },
+                {
+                  "name": "imageAlt",
+                  "selector": "div:nth-child(3)>div>picture>img[alt]"
+                }
+              ]
+            }
+          }
+        },
+        {
           "title": "Video",
           "id": "video",
           "model": "video",

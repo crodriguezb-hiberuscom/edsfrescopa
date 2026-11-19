@@ -44,7 +44,7 @@ Official docs:
 
 ### Prerequisites (why this demo does not have one deployed)
 
-1. A **Cloud Manager program with the Edge Delivery Services add-on**, and the EDS site onboarded in Cloud Manager (origin `https://main--edsfrescopa--jorgerzt.aem.live/`).
+1. A **Cloud Manager program with the Edge Delivery Services add-on**, and the EDS site onboarded in Cloud Manager (origin `https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/`).
 2. A **custom domain** with a certificate, mapped to the Adobe Managed CDN. `*.aem.page` / `*.aem.live` URLs cannot route to edge functions.
 3. The **Deployment Manager** role and an EDS configuration pipeline.
 4. `aio` CLI with the plugin: `aio plugins install @adobe/aio-cli-plugin-aem-edge-functions`.

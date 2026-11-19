@@ -9,17 +9,17 @@ The `Origin` column tells them apart: `EW` for authored rows, `API` for rows man
 
 ## Authored redirects (Experience Workspace)
 
-Sheet: [da.live/sheet#/jorgerzt/edsfrescopa/redirects](https://da.live/sheet#/jorgerzt/edsfrescopa/redirects) · JSON: [/redirects.json](https://main--edsfrescopa--jorgerzt.aem.page/redirects.json)
+Sheet: [da.live/sheet#/crodriguezb-hiberuscom/edsfrescopa/redirects](https://da.live/sheet#/crodriguezb-hiberuscom/edsfrescopa/redirects) · JSON: [/redirects.json](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/redirects.json)
 
 | Source | Destination | Origin | Why |
 | --- | --- | --- | --- |
-| [/cafe](https://main--edsfrescopa--jorgerzt.aem.page/cafe) | /coffee | EW | Spanish-friendly alias |
-| [/maquinas](https://main--edsfrescopa--jorgerzt.aem.page/maquinas) | /machines | EW | Spanish-friendly alias |
-| [/tiendas](https://main--edsfrescopa--jorgerzt.aem.page/tiendas) | /locations | EW | Spanish-friendly alias |
-| [/nosotros](https://main--edsfrescopa--jorgerzt.aem.page/nosotros) | /about-us | EW | Spanish-friendly alias |
-| [/promo](https://main--edsfrescopa--jorgerzt.aem.page/promo) | /subscription | EW | Campaign vanity URL |
-| [/en/accessories](https://main--edsfrescopa--jorgerzt.aem.page/en/accessories) | /accessories | EW | Page that doesn't exist in `/en` |
-| [/blog/rise-and-shine](https://main--edsfrescopa--jorgerzt.aem.page/blog/rise-and-shine) | /rise-and-shine | EW | Old URL from a previous site structure |
+| [/cafe](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/cafe) | /coffee | EW | Spanish-friendly alias |
+| [/maquinas](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/maquinas) | /machines | EW | Spanish-friendly alias |
+| [/tiendas](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/tiendas) | /locations | EW | Spanish-friendly alias |
+| [/nosotros](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/nosotros) | /about-us | EW | Spanish-friendly alias |
+| [/promo](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/promo) | /subscription | EW | Campaign vanity URL |
+| [/en/accessories](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/en/accessories) | /accessories | EW | Page that doesn't exist in `/en` |
+| [/blog/rise-and-shine](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/blog/rise-and-shine) | /rise-and-shine | EW | Old URL from a previous site structure |
 
 All of them return **301** on preview (`aem.page`) and live (`aem.live`): the sheet is published. After editing it, preview it to test and publish it to apply the change on live.
 
@@ -74,10 +74,10 @@ EDS edge ── 301 for every row on aem.page (and aem.live once published)
 
 | Source | Destination | Origin |
 | --- | --- | --- |
-| [/products/cold-brew-kit](https://main--edsfrescopa--jorgerzt.aem.page/products/cold-brew-kit) | /coffee | API |
-| [/products/frescopa-barista-pro](https://main--edsfrescopa--jorgerzt.aem.page/products/frescopa-barista-pro) | /machines | API |
-| [/campaigns/black-friday](https://main--edsfrescopa--jorgerzt.aem.page/campaigns/black-friday) | /subscription | API |
-| [/stores/madrid-gran-via](https://main--edsfrescopa--jorgerzt.aem.page/stores/madrid-gran-via) | /locations | API |
+| [/products/cold-brew-kit](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/products/cold-brew-kit) | /coffee | API |
+| [/products/frescopa-barista-pro](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/products/frescopa-barista-pro) | /machines | API |
+| [/campaigns/black-friday](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/campaigns/black-friday) | /subscription | API |
+| [/stores/madrid-gran-via](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/stores/madrid-gran-via) | /locations | API |
 
 ### Run it
 
@@ -116,9 +116,9 @@ Recommendation: keep exact redirects as content (sheet, synced if needed) and re
 - The redirects are evaluated before the BYOM content overlay, so they work alongside the [BYOM](byom.md) and [json2html](json2html.md) setup.
 
 ```bash
-curl -sI https://main--edsfrescopa--jorgerzt.aem.page/cafe | grep -iE '^(HTTP|location)'
+curl -sI https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/cafe | grep -iE '^(HTTP|location)'
 # HTTP/2 301
-# location: https://main--edsfrescopa--jorgerzt.aem.page/coffee
+# location: https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/coffee
 ```
 
 ## What the sheet doesn't do

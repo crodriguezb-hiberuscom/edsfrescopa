@@ -4,11 +4,11 @@ Fréscopa has a site search per language, hreflang sitemaps and a `robots.txt`. 
 
 | Piece | Where it lives | Live URL |
 | --- | --- | --- |
-| Query indexes (one per language) | [`tools/search-config/query.yaml`](../tools/search-config/query.yaml) → config service | [/query-index.json](https://main--edsfrescopa--jorgerzt.aem.live/query-index.json), [/es/query-index.json](https://main--edsfrescopa--jorgerzt.aem.live/es/query-index.json), `/fr/…`, `/jp/…` |
-| Sitemaps with hreflang | [`tools/search-config/sitemap.yaml`](../tools/search-config/sitemap.yaml) → config service | [/sitemap-en.xml](https://main--edsfrescopa--jorgerzt.aem.live/sitemap-en.xml), `/sitemap-es.xml`, `/sitemap-fr.xml`, `/sitemap-jp.xml` |
-| Sitemap index | [`sitemap-index.xml`](../sitemap-index.xml) (code) | [/sitemap-index.xml](https://main--edsfrescopa--jorgerzt.aem.live/sitemap-index.xml) |
+| Query indexes (one per language) | [`tools/search-config/query.yaml`](../tools/search-config/query.yaml) → config service | [/query-index.json](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/query-index.json), [/es/query-index.json](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/es/query-index.json), `/fr/…`, `/jp/…` |
+| Sitemaps with hreflang | [`tools/search-config/sitemap.yaml`](../tools/search-config/sitemap.yaml) → config service | [/sitemap-en.xml](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/sitemap-en.xml), `/sitemap-es.xml`, `/sitemap-fr.xml`, `/sitemap-jp.xml` |
+| Sitemap index | [`sitemap-index.xml`](../sitemap-index.xml) (code) | [/sitemap-index.xml](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/sitemap-index.xml) |
 | robots.txt | [`tools/search-config/robots.txt`](../tools/search-config/robots.txt) → config service | Served only on the production domain (see below) |
-| Search block | [`blocks/search/search.js`](../blocks/search/search.js) | [/search?q=coffee](https://main--edsfrescopa--jorgerzt.aem.live/search?q=coffee), [/es/search?q=café](https://main--edsfrescopa--jorgerzt.aem.live/es/search?q=caf%C3%A9) |
+| Search block | [`blocks/search/search.js`](../blocks/search/search.js) | [/search?q=coffee](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/search?q=coffee), [/es/search?q=café](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/es/search?q=caf%C3%A9) |
 | Search box in the header | [`blocks/header/header.js`](../blocks/header/header.js) | Posts to `/search` or `/<locale>/search` |
 | Search pages | da.live: `/search`, `/es/search`, `/fr/search`, `/jp/search` | Each page has `Robots: noindex` metadata |
 
@@ -71,7 +71,7 @@ Add a `Robots` row with `noindex` to the page's **metadata** block in da.live. T
 The YAML and robots files in `tools/search-config/` are the source of truth. Push them to the [configuration service](https://www.aem.live/docs/config-service-setup):
 
 ```bash
-AEM_TOKEN=<admin token> node tools/search-config/apply-config.mjs jorgerzt edsfrescopa
+AEM_TOKEN=<admin token> node tools/search-config/apply-config.mjs crodriguezb-hiberuscom edsfrescopa
 ```
 
 | File | Config service endpoint |

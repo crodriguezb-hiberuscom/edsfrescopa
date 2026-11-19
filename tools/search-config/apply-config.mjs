@@ -10,7 +10,7 @@
  */
 import { readFile } from 'node:fs/promises';
 
-const [org = 'jorgerzt', site = 'edsfrescopa'] = process.argv.slice(2);
+const [org = 'crodriguezb-hiberuscom', site = 'edsfrescopa'] = process.argv.slice(2);
 const token = process.env.AEM_TOKEN;
 if (!token) {
   console.error('Set AEM_TOKEN (e.g. the token from https://admin.hlx.page/login or da.live)');

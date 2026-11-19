@@ -49,11 +49,11 @@ Use native site authentication.
 
 Example: `frescopa.coffee/my-account/*` or `/members/*` for logged-in customers.
 
-1. **Two EDS sites, one code base.** Keep the public site (`edsfrescopa`) public. Create a second **repoless** site (e.g. `edsfrescopa-members`) that reuses the same GitHub repo, and therefore the same blocks and styles, with its own content root in DA, e.g. `da.live/#/jorgerzt/edsfrescopa-members`. Turn on **site authentication** (Pattern 1) for that second site only. Its `aem.page`/`aem.live` URLs are now useless without the token.
+1. **Two EDS sites, one code base.** Keep the public site (`edsfrescopa`) public. Create a second **repoless** site (e.g. `edsfrescopa-members`) that reuses the same GitHub repo, and therefore the same blocks and styles, with its own content root in DA, e.g. `da.live/#/crodriguezb-hiberuscom/edsfrescopa-members`. Turn on **site authentication** (Pattern 1) for that second site only. Its `aem.page`/`aem.live` URLs are now useless without the token.
 2. **The CDN handles identity.** On the production domain, the CDN (Adobe Managed CDN, or BYO CDN) routes `/members/*` to logic that:
    1. Checks the user's session cookie. If it is missing, it redirects to the IdP (OIDC: Okta, Entra ID, Auth0, Adobe Commerce customer login, …).
    2. On the IdP callback, validates the ID token and sets a short-lived, `HttpOnly`, `Secure` session cookie.
-   3. Proxies the request to `main--edsfrescopa-members--jorgerzt.aem.live`, **adding `Authorization: token <site token>`**. The token is a secret stored at the edge and never sent to the browser.
+   3. Proxies the request to `main--edsfrescopa-members--crodriguezb-hiberuscom.aem.live`, **adding `Authorization: token <site token>`**. The token is a secret stored at the edge and never sent to the browser.
    4. Optionally checks **authorization** using claims from the token (group, tier, country) before proxying. This is the part EDS does not do itself.
 3. **Where that logic runs:**
    - **Adobe Managed CDN:** AEM Edge Functions (see [edge-workers.md](edge-workers.md)). `cdn.yaml` origin selectors route `/members/*` to the function, and the site token is kept as a Cloud Manager secret. Adobe also offers edge authentication rules in `cdn.yaml`; at the time of writing, OIDC login at the edge for EDS is in beta, so confirm availability with the Adobe team.

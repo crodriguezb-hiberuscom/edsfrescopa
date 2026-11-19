@@ -1,16 +1,16 @@
 # Fréscopa on AEM Edge Delivery Services + Document Authoring
 
 [![AEM Edge Delivery Services](https://img.shields.io/badge/AEM-Edge%20Delivery%20Services-EB1000?logo=adobe&logoColor=white)](https://www.aem.live/)
-[![Document Authoring](https://img.shields.io/badge/content-da.live%20%2F%20Experience%20Workspace-EB1000?logo=adobe&logoColor=white)](https://da.live/#/jorgerzt/edsfrescopa)
-[![Preview](https://img.shields.io/badge/preview-aem.page-1D95E7)](https://main--edsfrescopa--jorgerzt.aem.page/)
-[![Live](https://img.shields.io/badge/live-aem.live-0BA45D)](https://main--edsfrescopa--jorgerzt.aem.live/)
+[![Document Authoring](https://img.shields.io/badge/content-da.live%20%2F%20Experience%20Workspace-EB1000?logo=adobe&logoColor=white)](https://da.live/#/crodriguezb-hiberuscom/edsfrescopa)
+[![Preview](https://img.shields.io/badge/preview-aem.page-1D95E7)](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/)
+[![Live](https://img.shields.io/badge/live-aem.live-0BA45D)](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/)
 [![AEM Code Sync](https://img.shields.io/badge/AEM%20Code%20Sync-enabled-0BA45D?logo=github)](https://github.com/apps/aem-code-sync)
 [![Boilerplate](https://img.shields.io/badge/boilerplate-da--block--collection-555)](https://github.com/aemsites/da-block-collection)
 
-[![Build](https://github.com/JorgeRZT/edsfrescopa/actions/workflows/main.yaml/badge.svg)](https://github.com/JorgeRZT/edsfrescopa/actions/workflows/main.yaml)
-[![Redirects sync](https://github.com/JorgeRZT/edsfrescopa/actions/workflows/redirects-sync.yaml/badge.svg)](https://github.com/JorgeRZT/edsfrescopa/actions/workflows/redirects-sync.yaml)
-[![License: Apache-2.0](https://img.shields.io/github/license/JorgeRZT/edsfrescopa)](LICENSE)
-[![Last commit](https://img.shields.io/github/last-commit/JorgeRZT/edsfrescopa)](https://github.com/JorgeRZT/edsfrescopa/commits/main)
+[![Build](https://github.com/crodriguezb-hiberuscom/edsfrescopa/actions/workflows/main.yaml/badge.svg)](https://github.com/crodriguezb-hiberuscom/edsfrescopa/actions/workflows/main.yaml)
+[![Redirects sync](https://github.com/crodriguezb-hiberuscom/edsfrescopa/actions/workflows/redirects-sync.yaml/badge.svg)](https://github.com/crodriguezb-hiberuscom/edsfrescopa/actions/workflows/redirects-sync.yaml)
+[![License: Apache-2.0](https://img.shields.io/github/license/crodriguezb-hiberuscom/edsfrescopa)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/crodriguezb-hiberuscom/edsfrescopa)](https://github.com/crodriguezb-hiberuscom/edsfrescopa/commits/main)
 [![Node](https://img.shields.io/badge/node-%E2%89%A518-339933?logo=nodedotjs&logoColor=white)](package.json)
 [![Vanilla JS](https://img.shields.io/badge/JS-vanilla%2C%20no%20build-F7DF1E?logo=javascript&logoColor=black)](scripts/scripts.js)
 ![BYOM](https://img.shields.io/badge/integration-BYOM-6E3FF3)
@@ -21,9 +21,9 @@
 
 A migration of [frescopa.coffee](https://frescopa.coffee/) to an AEM Edge Delivery Services project with content in Document Authoring (da.live). It is built on the [`aemsites/da-block-collection`](https://github.com/aemsites/da-block-collection) template. The visual blocks, styles, fonts and icons are ported from the source project [`aem-showcase/frescopa`](https://github.com/aem-showcase/frescopa) (Apache-2.0).
 
-- **Content (DA):** https://da.live/#/jorgerzt/edsfrescopa. Pages are in the root (EN), `/en/`, `/es/`, `/fr/` and `/jp/`. Images are in `/media/`, header and footer in `nav` and `footer` (plus `/<locale>/nav|footer`), and the enquiry form in `/forms/enquire`.
-- **Preview:** https://main--edsfrescopa--jorgerzt.aem.page/
-- **Live:** https://main--edsfrescopa--jorgerzt.aem.live/. All content pages are published, because the query index (search and sitemaps) only contains published pages. Crawlers are still kept out: EDS always serves `Disallow: /` as `robots.txt` on `*.aem.page` and `*.aem.live`.
+- **Content (DA):** https://da.live/#/crodriguezb-hiberuscom/edsfrescopa. Pages are in the root (EN), `/en/`, `/es/`, `/fr/` and `/jp/`. Images are in `/media/`, header and footer in `nav` and `footer` (plus `/<locale>/nav|footer`), and the enquiry form in `/forms/enquire`.
+- **Preview:** https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/
+- **Live:** https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/. All content pages are published, because the query index (search and sitemaps) only contains published pages. Crawlers are still kept out: EDS always serves `Disallow: /` as `robots.txt` on `*.aem.page` and `*.aem.live`.
 
 ## Differences from the source site
 
@@ -45,7 +45,7 @@ The source references a few DAM assets that return 404 (for example `AdobeStock_
 
 Every capability, integration and use case in this project, and its status:
 
-- ✅ **Implemented:** working on preview (https://main--edsfrescopa--jorgerzt.aem.page) and live (https://main--edsfrescopa--jorgerzt.aem.live).
+- ✅ **Implemented:** working on preview (https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page) and live (https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live).
 - 🟡 **Partial:** works, with a known gap.
 - 📄 **Documented only:** explained in `docs/`, **not implemented**, because it needs something a demo site does not have (a connected production domain, an identity provider).
 
@@ -55,26 +55,26 @@ Nothing here depends on Universal Editor or AEM Author: these are EDS capabiliti
 
 | Status | Capability | Use case it shows | Try it | Where it lives |
 | --- | --- | --- | --- | --- |
-| ✅ | **Migration of frescopa.coffee to EDS** | Move an AEM (xwalk) + Commerce site to EDS with content in documents | [Home](https://main--edsfrescopa--jorgerzt.aem.page/) | Whole repo; [differences from the source](#differences-from-the-source-site) |
-| ✅ | **Authoring in Experience Workspace (da.live)** | Business users edit pages and sheets as documents; preview and publish without developers | [da.live](https://da.live/#/jorgerzt/edsfrescopa) | da.live; sidekick in [`tools/sidekick`](tools/sidekick/config.json) |
-| ✅ | **Block library** (teaser, hero, cards, carousel, tabs, accordion, columns, table, quote, sticky-cta, reward, embed) | Reusable components: a table in the document → decorated HTML + CSS + JS | [/subscription](https://main--edsfrescopa--jorgerzt.aem.page/subscription) | [`blocks/`](blocks) |
+| ✅ | **Migration of frescopa.coffee to EDS** | Move an AEM (xwalk) + Commerce site to EDS with content in documents | [Home](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/) | Whole repo; [differences from the source](#differences-from-the-source-site) |
+| ✅ | **Authoring in Experience Workspace (da.live)** | Business users edit pages and sheets as documents; preview and publish without developers | [da.live](https://da.live/#/crodriguezb-hiberuscom/edsfrescopa) | da.live; sidekick in [`tools/sidekick`](tools/sidekick/config.json) |
+| ✅ | **Block library** (teaser, hero, cards, carousel, tabs, accordion, columns, table, quote, sticky-cta, reward, embed) | Reusable components: a table in the document → decorated HTML + CSS + JS | [/subscription](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/subscription) | [`blocks/`](blocks) |
 | ✅ | **Fragments and modals** (fragment, modal, header, footer) | Reuse content across pages; header and footer are documents too | Header and footer on every page | [`blocks/fragment`](blocks/fragment), [`blocks/modal`](blocks/modal) |
-| ✅ | **Content Fragment data as authored content** (offer, article, quiz) | Replace runtime GraphQL calls with rows authors edit | [/quiz](https://main--edsfrescopa--jorgerzt.aem.page/quiz), [/rise-and-shine](https://main--edsfrescopa--jorgerzt.aem.page/rise-and-shine) | [`blocks/quiz`](blocks/quiz), [`blocks/offer`](blocks/offer), [`blocks/article`](blocks/article) |
-| ✅ | **Product listing** with client-side sorting and count | Catalogue page without a commerce backend | [/coffee](https://main--edsfrescopa--jorgerzt.aem.page/coffee), [/machines](https://main--edsfrescopa--jorgerzt.aem.page/machines) | [`blocks/product-list-page-custom`](blocks/product-list-page-custom) |
-| ✅ | **Store locator** | Static locator panel | [/locations](https://main--edsfrescopa--jorgerzt.aem.page/locations) | [`blocks/store-locator`](blocks/store-locator) |
-| ✅ | **Dynamic Media** (dm-video, dm-scene7-template, video) | Images and video delivered from AEM Assets / Dynamic Media inside EDS | [/sustainability](https://main--edsfrescopa--jorgerzt.aem.page/sustainability) | [`blocks/dm-video`](blocks/dm-video), [`blocks/dm-scene7-template`](blocks/dm-scene7-template) |
-| ✅ | **Multi-language site** (`/en`, `/es`, `/fr`, `/jp`) with switcher and nav per locale | Localised sites from one codebase | [/es/](https://main--edsfrescopa--jorgerzt.aem.page/es/), [/jp/](https://main--edsfrescopa--jorgerzt.aem.page/jp/) | da.live folders; [`blocks/header`](blocks/header), `LOCALES` in [`scripts/scripts.js`](scripts/scripts.js) |
-| ✅ | **BYOM** | A page served by an external system (commerce, PIM, headless CMS) as EDS HTML | [/integrations/byom](https://main--edsfrescopa--jorgerzt.aem.page/integrations/byom) | Site overlay + my-custom-api · [docs/byom.md](docs/byom.md) |
-| ✅ | **json2html** | External JSON + a Mustache template in the repo = EDS page | [/integrations/json2html](https://main--edsfrescopa--jorgerzt.aem.page/integrations/json2html) | [`templates/json2html`](templates/json2html) · [docs/json2html.md](docs/json2html.md) |
-| ✅ | **Redirects authored in EW** | Authors manage 301s in a sheet; migrations with URL maps | [/cafe](https://main--edsfrescopa--jorgerzt.aem.page/cafe) → /coffee | `redirects` sheet in da.live · [docs/redirects.md](docs/redirects.md) |
-| ✅ | **Redirects defined by an API** | An external system owns some redirects; a GitHub Action syncs them into the same sheet | [/products/cold-brew-kit](https://main--edsfrescopa--jorgerzt.aem.page/products/cold-brew-kit) → /coffee | [`tools/redirects-sync`](tools/redirects-sync), [workflow](.github/workflows/redirects-sync.yaml) · [docs/redirects.md](docs/redirects.md#redirects-defined-by-an-api) |
+| ✅ | **Content Fragment data as authored content** (offer, article, quiz) | Replace runtime GraphQL calls with rows authors edit | [/quiz](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/quiz), [/rise-and-shine](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/rise-and-shine) | [`blocks/quiz`](blocks/quiz), [`blocks/offer`](blocks/offer), [`blocks/article`](blocks/article) |
+| ✅ | **Product listing** with client-side sorting and count | Catalogue page without a commerce backend | [/coffee](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/coffee), [/machines](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/machines) | [`blocks/product-list-page-custom`](blocks/product-list-page-custom) |
+| ✅ | **Store locator** | Static locator panel | [/locations](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/locations) | [`blocks/store-locator`](blocks/store-locator) |
+| ✅ | **Dynamic Media** (dm-video, dm-scene7-template, video) | Images and video delivered from AEM Assets / Dynamic Media inside EDS | [/sustainability](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/sustainability) | [`blocks/dm-video`](blocks/dm-video), [`blocks/dm-scene7-template`](blocks/dm-scene7-template) |
+| ✅ | **Multi-language site** (`/en`, `/es`, `/fr`, `/jp`) with switcher and nav per locale | Localised sites from one codebase | [/es/](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/es/), [/jp/](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/jp/) | da.live folders; [`blocks/header`](blocks/header), `LOCALES` in [`scripts/scripts.js`](scripts/scripts.js) |
+| ✅ | **BYOM** | A page served by an external system (commerce, PIM, headless CMS) as EDS HTML | [/integrations/byom](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/integrations/byom) | Site overlay + my-custom-api · [docs/byom.md](docs/byom.md) |
+| ✅ | **json2html** | External JSON + a Mustache template in the repo = EDS page | [/integrations/json2html](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/integrations/json2html) | [`templates/json2html`](templates/json2html) · [docs/json2html.md](docs/json2html.md) |
+| ✅ | **Redirects authored in EW** | Authors manage 301s in a sheet; migrations with URL maps | [/cafe](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/cafe) → /coffee | `redirects` sheet in da.live · [docs/redirects.md](docs/redirects.md) |
+| ✅ | **Redirects defined by an API** | An external system owns some redirects; a GitHub Action syncs them into the same sheet | [/products/cold-brew-kit](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/products/cold-brew-kit) → /coffee | [`tools/redirects-sync`](tools/redirects-sync), [workflow](.github/workflows/redirects-sync.yaml) · [docs/redirects.md](docs/redirects.md#redirects-defined-by-an-api) |
 | ✅ | **Security baseline** | CSP with nonces moved to an HTTP header; `noindex` per page through metadata, never global | View source on any page | [`head.html`](head.html) |
-| ✅ | **Site search per language** | Search box in the header and a results page per locale, over a query index generated on publish; no search backend | [/search?q=coffee](https://main--edsfrescopa--jorgerzt.aem.live/search?q=coffee), [/es/search?q=café](https://main--edsfrescopa--jorgerzt.aem.live/es/search?q=caf%C3%A9) | [`blocks/search`](blocks/search), [`query.yaml`](tools/search-config/query.yaml) · [docs/search-and-sitemaps.md](docs/search-and-sitemaps.md) |
-| ✅ | **Sitemaps with hreflang + robots.txt** | SEO: one sitemap per language, alternates between translations, sitemap index referenced from robots | [/sitemap-es.xml](https://main--edsfrescopa--jorgerzt.aem.live/sitemap-es.xml), [/sitemap-index.xml](https://main--edsfrescopa--jorgerzt.aem.live/sitemap-index.xml) | [`sitemap.yaml`](tools/search-config/sitemap.yaml), [`robots.txt`](tools/search-config/robots.txt), [`sitemap-index.xml`](sitemap-index.xml) · [docs/search-and-sitemaps.md](docs/search-and-sitemaps.md) |
+| ✅ | **Site search per language** | Search box in the header and a results page per locale, over a query index generated on publish; no search backend | [/search?q=coffee](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/search?q=coffee), [/es/search?q=café](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/es/search?q=caf%C3%A9) | [`blocks/search`](blocks/search), [`query.yaml`](tools/search-config/query.yaml) · [docs/search-and-sitemaps.md](docs/search-and-sitemaps.md) |
+| ✅ | **Sitemaps with hreflang + robots.txt** | SEO: one sitemap per language, alternates between translations, sitemap index referenced from robots | [/sitemap-es.xml](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/sitemap-es.xml), [/sitemap-index.xml](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/sitemap-index.xml) | [`sitemap.yaml`](tools/search-config/sitemap.yaml), [`robots.txt`](tools/search-config/robots.txt), [`sitemap-index.xml`](sitemap-index.xml) · [docs/search-and-sitemaps.md](docs/search-and-sitemaps.md) |
 | ✅ | **Performance by design** (eager / lazy / delayed loading) | Lighthouse 100 pattern: first section first, the rest later, third parties after 3 s | Any page | [`scripts/scripts.js`](scripts/scripts.js), [`scripts/delayed.js`](scripts/delayed.js) |
-| ✅ | **CI** | Lint on every push; event-driven or manual content jobs (redirects sync) | [Actions](https://github.com/JorgeRZT/edsfrescopa/actions) | [`.github/workflows`](.github/workflows) |
-| 🟡 | **Forms** (form, embed-adaptive-form) | Forms defined in documents | [/contact-us](https://main--edsfrescopa--jorgerzt.aem.page/contact-us) | Renders fully; **no submission backend** |
-| 🟡 | **Translations** | Language copies exist; **translation projects in the EW app are not set up** | [/fr/](https://main--edsfrescopa--jorgerzt.aem.page/fr/) | da.live |
+| ✅ | **CI** | Lint on every push; event-driven or manual content jobs (redirects sync) | [Actions](https://github.com/crodriguezb-hiberuscom/edsfrescopa/actions) | [`.github/workflows`](.github/workflows) |
+| 🟡 | **Forms** (form, embed-adaptive-form) | Forms defined in documents | [/contact-us](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/contact-us) | Renders fully; **no submission backend** |
+| 🟡 | **Translations** | Language copies exist; **translation projects in the EW app are not set up** | [/fr/](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/fr/) | da.live |
 
 ### Documented only (not implemented)
 
@@ -96,34 +96,34 @@ The external service behind BYOM, json2html and the API redirects is [my-custom-
 
 ### 1. BYOM
 
-- **What:** [/integrations/byom](https://main--edsfrescopa--jorgerzt.aem.page/integrations/byom) is not authored in DA. An external service returns finished EDS HTML (sections and block tables) and EDS treats it like any other document.
+- **What:** [/integrations/byom](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/integrations/byom) is not authored in DA. An external service returns finished EDS HTML (sections and block tables) and EDS treats it like any other document.
 - **How:** the site's content **overlay** (site config in the Admin API) points at `https://my-custom-api.lopezpellicerjorge.workers.dev/api/frescopa/byom`. EDS asks the overlay first; a 404 falls back to da.live, so only the paths the service knows are taken over.
 - **Where it lives:** site config (overlay), endpoint `frescopa/byom` in my-custom-api. No code in this repo: the page uses the existing blocks.
 - **When it updates:** when the page is previewed or published.
 
 ### 2. json2html
 
-- **What:** [/integrations/json2html](https://main--edsfrescopa--jorgerzt.aem.page/integrations/json2html) is built from raw JSON (`frescopa/roasts`) and a template.
+- **What:** [/integrations/json2html](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/integrations/json2html) is built from raw JSON (`frescopa/roasts`) and a template.
 - **How:** the overlay answers that path with a 302 to Adobe's json2html worker, which fetches the JSON and renders it with [`templates/json2html/todays-roasts.html`](templates/json2html/todays-roasts.html) (Mustache). The output is EDS HTML, decorated by the normal blocks.
-- **Where it lives:** template in this repo, json2html config for `jorgerzt/edsfrescopa`, JSON endpoint in my-custom-api.
+- **Where it lives:** template in this repo, json2html config for `crodriguezb-hiberuscom/edsfrescopa`, JSON endpoint in my-custom-api.
 - **When it updates:** when the page is previewed or published.
 
 ### 3. Redirects authored in Experience Workspace
 
-- **What:** 301 redirects such as [/cafe](https://main--edsfrescopa--jorgerzt.aem.page/cafe) → /coffee, [/maquinas](https://main--edsfrescopa--jorgerzt.aem.page/maquinas) → /machines and [/tiendas](https://main--edsfrescopa--jorgerzt.aem.page/tiendas) → /locations.
+- **What:** 301 redirects such as [/cafe](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/cafe) → /coffee, [/maquinas](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/maquinas) → /machines and [/tiendas](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/tiendas) → /locations.
 - **How:** a `redirects` sheet in the root of the content with `Source` and `Destination` columns. Authors edit it in Experience Workspace and preview or publish it like any page. No code.
-- **Where it lives:** [`redirects`](https://da.live/sheet#/jorgerzt/edsfrescopa/redirects) in da.live, rows with `Origin = EW`.
+- **Where it lives:** [`redirects`](https://da.live/sheet#/crodriguezb-hiberuscom/edsfrescopa/redirects) in da.live, rows with `Origin = EW`.
 
 ### 4. Redirects defined by an external API
 
-- **What:** the (fictional) Fréscopa commerce decides redirects when it retires products, closes stores or ends campaigns, for example [/products/cold-brew-kit](https://main--edsfrescopa--jorgerzt.aem.page/products/cold-brew-kit) → /coffee and [/stores/madrid-gran-via](https://main--edsfrescopa--jorgerzt.aem.page/stores/madrid-gran-via) → /locations.
+- **What:** the (fictional) Fréscopa commerce decides redirects when it retires products, closes stores or ends campaigns, for example [/products/cold-brew-kit](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/products/cold-brew-kit) → /coffee and [/stores/madrid-gran-via](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.page/stores/madrid-gran-via) → /locations.
 - **How:** EDS only applies the `redirects` sheet, so the API is synced into it. [`tools/redirects-sync/sync-redirects.mjs`](tools/redirects-sync/sync-redirects.mjs) reads [the API](https://my-custom-api.lopezpellicerjorge.workers.dev/api/frescopa/redirects), keeps the authored rows, regenerates the rows with `Origin = API`, writes the sheet to da.live and previews it (or publishes it with `--publish`). Authored rows win on conflict.
 - **Trigger:** the GitHub Action [`.github/workflows/redirects-sync.yaml`](.github/workflows/redirects-sync.yaml), started by the external system (`repository_dispatch`, event `redirects-updated`), by hand or by a cron. It needs the `DA_TOKEN` secret; without it, it only runs a dry run.
 - **Where it lives:** script and workflow in this repo, endpoint `frescopa/redirects` in my-custom-api, rows with `Origin = API` in the same sheet.
 
 ### 5. Search and sitemaps
 
-- **What:** a search box in the header and a results page per language ([/search?q=coffee](https://main--edsfrescopa--jorgerzt.aem.live/search?q=coffee), [/es/search](https://main--edsfrescopa--jorgerzt.aem.live/es/search?q=caf%C3%A9)), and one sitemap per language with hreflang alternates ([/sitemap-en.xml](https://main--edsfrescopa--jorgerzt.aem.live/sitemap-en.xml)).
+- **What:** a search box in the header and a results page per language ([/search?q=coffee](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/search?q=coffee), [/es/search](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/es/search?q=caf%C3%A9)), and one sitemap per language with hreflang alternates ([/sitemap-en.xml](https://main--edsfrescopa--crodriguezb-hiberuscom.aem.live/sitemap-en.xml)).
 - **How:** publishing a page indexes it. [`query.yaml`](tools/search-config/query.yaml) defines four indexes (`/query-index.json`, `/es/…`, `/fr/…`, `/jp/…`) with title, description, image, template, robots and lastModified, read from the page `<head>`. The [search block](blocks/search/search.js) fetches the index of the current locale and filters it in the browser, hiding `noindex` pages. [`sitemap.yaml`](tools/search-config/sitemap.yaml) turns the four indexes into `/sitemap-xx.xml` with `hreflang` links between `/coffee`, `/es/coffee`, `/fr/coffee` and `/jp/coffee`.
 - **Where it lives:** block and config files in this repo, pushed to the configuration service with [`tools/search-config/apply-config.mjs`](tools/search-config/apply-config.mjs); `search` pages in da.live with `Robots: noindex` metadata.
 - **When it updates:** on publish or unpublish. Preview-only pages are not indexed.
